@@ -5,14 +5,15 @@ import java.util.List;
 
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLAutoDrawable;
-import com.jogamp.opengl.GLEventListener;
 
-public class HelloWorldCanvas implements GLEventListener {
+import es.javier.learning.gfx.model.CustomCanvas;
+
+public class HelloWorldCanvas extends CustomCanvas {
     private List<Double> hLetterX, hLetterY;
 
     @Override
-    public void display(GLAutoDrawable draw) {
-        final GL2 gl = draw.getGL().getGL2();
+    public void display(GLAutoDrawable drawable) {
+        final GL2 gl = drawable.getGL().getGL2();
 
         gl.glBegin(GL2.GL_LINES);
         for (int index = 0; index < hLetterX.size(); index++) {
