@@ -26,54 +26,29 @@ public class RandomTriangleCanvas extends CustomCanvas {
     }
 
     @Override
-    public void dispose(GLAutoDrawable drawable) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
     public void display(GLAutoDrawable drawable) {
         final GL2 gl = drawable.getGL().getGL2();
         gl.glBegin(GL2.GL_LINES);
-            gl.glVertex2d(
-                norm.getNormX(triangle.getV1().getX()),
-                norm.getNormY(triangle.getV1().getY())
-                );
-            gl.glVertex2d(
-                norm.getNormX(triangle.getV2().getX()),
-                norm.getNormY(triangle.getV2().getY())
-            );
+        gl.glVertex2d(norm.getNormX(triangle.getV1().getX()), norm.getNormY(triangle.getV1().getY()));
+        gl.glVertex2d(norm.getNormX(triangle.getV2().getX()), norm.getNormY(triangle.getV2().getY()));
         gl.glEnd();
 
         gl.glBegin(GL2.GL_LINES);
-            gl.glVertex2d(
-                norm.getNormX(triangle.getV2().getX()),
-                norm.getNormY(triangle.getV2().getY())
-            );
-            gl.glVertex2d(
-                norm.getNormX(triangle.getV3().getX()),
-                norm.getNormY(triangle.getV3().getY())
-            );
+        gl.glVertex2d(norm.getNormX(triangle.getV2().getX()), norm.getNormY(triangle.getV2().getY()));
+        gl.glVertex2d(norm.getNormX(triangle.getV3().getX()), norm.getNormY(triangle.getV3().getY()));
         gl.glEnd();
 
         gl.glBegin(GL2.GL_LINES);
-            gl.glVertex2d(
-                norm.getNormX(triangle.getV3().getX()),
-                norm.getNormY(triangle.getV3().getY())
-            );
-            gl.glVertex2d(
-                norm.getNormX(triangle.getV1().getX()),
-                norm.getNormY(triangle.getV1().getY())
-            );
+        gl.glVertex2d(norm.getNormX(triangle.getV3().getX()), norm.getNormY(triangle.getV3().getY()));
+        gl.glVertex2d(norm.getNormX(triangle.getV1().getX()), norm.getNormY(triangle.getV1().getY()));
         gl.glEnd();
 
         gl.glFlush();
     }
 
     @Override
-    public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
+    public void update() {
         // TODO Auto-generated method stub
 
     }
-
 }

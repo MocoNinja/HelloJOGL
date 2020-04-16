@@ -17,14 +17,7 @@ public class NormalizatorTestCanvas extends CustomCanvas{
     }
     
     @Override
-    public void init(GLAutoDrawable drawable) {
-    }
-
-    @Override
-    public void dispose(GLAutoDrawable drawable) {
-        // TODO Auto-generated method stub
-
-    }
+    public void init(GLAutoDrawable drawable) { }
 
     @Override
     public void display(GLAutoDrawable drawable) {
@@ -59,8 +52,5 @@ public class NormalizatorTestCanvas extends CustomCanvas{
     }
 
     @Override
-    public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
-        // TODO Auto-generated method stub
-
-    }
+    public void update() { }
 }

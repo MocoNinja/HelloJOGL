@@ -24,12 +24,6 @@ public class HelloWorldCanvas extends CustomCanvas {
     }
 
     @Override
-    public void dispose(GLAutoDrawable arg0) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
     public void init(GLAutoDrawable arg0) {
         hLetterX = new ArrayList<>() {
             {
@@ -55,7 +49,6 @@ public class HelloWorldCanvas extends CustomCanvas {
     }
 
     @Override
-    public void reshape(GLAutoDrawable arg0, int arg1, int arg2, int arg3, int arg4) {
+    public void update() { }
 
-    }
 }

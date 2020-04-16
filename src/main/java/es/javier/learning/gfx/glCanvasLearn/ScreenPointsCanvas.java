@@ -8,15 +8,7 @@ import es.javier.learning.gfx.model.CustomCanvas;
 public class ScreenPointsCanvas extends CustomCanvas {
 
     @Override
-    public void init(GLAutoDrawable drawable) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void dispose(GLAutoDrawable drawable) {
-
-    }
+    public void init(GLAutoDrawable drawable) { }
 
     @Override
     public void display(GLAutoDrawable drawable) {
@@ -38,9 +30,6 @@ public class ScreenPointsCanvas extends CustomCanvas {
     }
 
     @Override
-    public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
-        // TODO Auto-generated method stub
-
-    }
+    public void update() { }
 
 }
