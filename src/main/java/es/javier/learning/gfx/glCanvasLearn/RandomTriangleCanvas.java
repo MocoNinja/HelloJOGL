@@ -21,7 +21,7 @@ public class RandomTriangleCanvas extends CustomCanvas {
 
     @Override
     public void init(GLAutoDrawable drawable) {
-        triangle = Triangle.generateRandom(0, 0, 320, 200);
+        triangle = Triangle.generateRandom(0, 0, WIDTH, HEIGHT);
         System.out.println(triangle);
     }
 
@@ -34,10 +34,40 @@ public class RandomTriangleCanvas extends CustomCanvas {
     @Override
     public void display(GLAutoDrawable drawable) {
         final GL2 gl = drawable.getGL().getGL2();
-        gl.glBegin(GL2.GL_POINTS);
-
+        gl.glBegin(GL2.GL_LINES);
+            gl.glVertex2d(
+                norm.getNormX(triangle.getV1().getX()),
+                norm.getNormY(triangle.getV1().getY())
+                );
+            gl.glVertex2d(
+                norm.getNormX(triangle.getV2().getX()),
+                norm.getNormY(triangle.getV2().getY())
+            );
         gl.glEnd();
 
+        gl.glBegin(GL2.GL_LINES);
+            gl.glVertex2d(
+                norm.getNormX(triangle.getV2().getX()),
+                norm.getNormY(triangle.getV2().getY())
+            );
+            gl.glVertex2d(
+                norm.getNormX(triangle.getV3().getX()),
+                norm.getNormY(triangle.getV3().getY())
+            );
+        gl.glEnd();
+
+        gl.glBegin(GL2.GL_LINES);
+            gl.glVertex2d(
+                norm.getNormX(triangle.getV3().getX()),
+                norm.getNormY(triangle.getV3().getY())
+            );
+            gl.glVertex2d(
+                norm.getNormX(triangle.getV1().getX()),
+                norm.getNormY(triangle.getV1().getY())
+            );
+        gl.glEnd();
+
+        gl.glFlush();
     }
 
     @Override

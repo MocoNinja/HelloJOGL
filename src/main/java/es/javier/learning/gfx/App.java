@@ -1,6 +1,7 @@
 package es.javier.learning.gfx;
 
 import javax.swing.JFrame;
+
 import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.awt.GLCanvas;
@@ -22,7 +23,7 @@ public class App {
         GLCapabilities cap = new GLCapabilities(gp);
 
         final GLCanvas gc = new GLCanvas(cap);
-        final CustomCanvas sq   = new NormalizatorTestCanvas(WIDTH, HEIGHT);
+        final CustomCanvas sq   = new RandomTriangleCanvas(WIDTH, HEIGHT);
         gc.addGLEventListener(sq);
         gc.setSize(WIDTH, HEIGHT);
 
