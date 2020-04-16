@@ -5,9 +5,7 @@ import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.awt.GLCanvas;
 
-import es.javier.learning.gfx.glCanvasLearn.HelloWorldCanvas;
-import es.javier.learning.gfx.glCanvasLearn.RandomTriangleCanvas;
-import es.javier.learning.gfx.glCanvasLearn.ScreenPointsCanvas;
+import es.javier.learning.gfx.glCanvasLearn.*;
 import es.javier.learning.gfx.model.CustomCanvas;
 
 public class App {
@@ -24,7 +22,7 @@ public class App {
         GLCapabilities cap = new GLCapabilities(gp);
 
         final GLCanvas gc = new GLCanvas(cap);
-        final CustomCanvas sq   = new ScreenPointsCanvas();
+        final CustomCanvas sq   = new NormalizatorTestCanvas(WIDTH, HEIGHT);
         gc.addGLEventListener(sq);
         gc.setSize(WIDTH, HEIGHT);
 
