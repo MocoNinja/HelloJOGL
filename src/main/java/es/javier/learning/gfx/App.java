@@ -27,13 +27,8 @@ public class App {
         gc.addGLEventListener(sq);
         gc.setSize(WIDTH, HEIGHT);
 
-        final JFrame frame = new JFrame(title);
-        frame.setSize(WIDTH, HEIGHT);
-        frame.setResizable(false);
-        frame.setLocationRelativeTo(null);
-        frame.add(gc);
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        final JWindow window = new JWindow(WIDTH, HEIGHT, title, gc);
+
     }
 
 }
